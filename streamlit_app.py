@@ -27,7 +27,7 @@ with st.expander('Data:'):
 with st.expander('Visualize:'):
   st.scatter_chart(data=data, x='bill_depth_mm', x_label='Bill Depth (mm)', y='body_mass_kg', y_label='Body Mass (kg)', color='species')
 
-with st.sidebar:
+with st.sidebar('Make predictions'):
   st.header('Your inputs:')
   island = st.selectbox('Island', ('Torgersen', 'Biscoe', 'Dream'), placeholder='Choose island...')
   gender = st.selectbox('Gender', ('Male', 'Female'), placeholder='Choose gender...')

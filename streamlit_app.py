@@ -10,7 +10,7 @@ data = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/master/
 
 data['body_mass_g'] /= 1000
 
-data.rename(columns={'body_mass_g' : 'body_mass_kg'}, inplace='True')
+data.rename(columns={'body_mass_g' : 'body_mass_kg'}, inplace=True)
 
 with st.expander('Data:'):
   st.write("**Raw data**")
@@ -31,5 +31,5 @@ with st.sidebar:
   st.header('Your inputs:')
   island = st.selectbox('Island', ('Torgersen', 'Biscoe', 'Dream'), placeholder='Choose island...')
   gender = st.selectbox('Gender', ('Male', 'Female'), placeholder='Choose gender...')
-  bill_length_mm = st.slider('Bill Length (mm)', min(data['bill_length_mm']), max(data['bill_length_mm']), mean(data['bill_length_mm']))
+  bill_length_mm = st.slider('Bill Length (mm)', min(data['bill_length_mm']), max(data['bill_length_mm']), float(data['bill_length_mm'].mean()))
 

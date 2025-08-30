@@ -3,6 +3,13 @@ import pandas as pd
 import numpy as np
 import math
 
+st.set_page_config(
+  page_title = 'Mertali Tercan',
+  page_icon = ':female-doctor:',
+  layout='wide',
+  initial_sidebar_state='expanded'
+)
+
 st.title("Machine Learning Application - Mertali Tercan")
 st.info("Hello!")
 

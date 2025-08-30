@@ -11,10 +11,15 @@ with st.expander('Data:'):
   data
 
   st.write('**X**')
-  X = data.drop(['species'], axis=1)
+  X = data.drop('species', axis=1)
   X
 
   st.write('**Y**')
-  y = data['species']
+  y = data.species
   y
+
+st.markdown('hey')
+
+with st.expander('Visualize the data:'):
+  st.scatter_chart(data=data, x='bill_depth_mm', x_label='Bill Depth', y='body_mass_g', y_label='Body Mass', color='species')
 

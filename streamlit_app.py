@@ -41,6 +41,7 @@ inputs = { 'island': island, 'bill_length_mm': bill_length_mm, 'bill_depth_mm': 
 }
 
 inputs_df = pd.DataFrame(inputs, index=[0])
+inputs_df
 
 
 

@@ -11,7 +11,7 @@ with st.expander('Data:'):
   data
 
   st.write('**X**')
-  X = data.drop(['species'])
+  X = data.drop(['species'], axis=1)
   X
 
   st.write('**Y**')

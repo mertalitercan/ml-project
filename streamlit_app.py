@@ -19,6 +19,7 @@ with st.expander('Data:'):
   y
 
 st.markdown('hey')
+st.markdown('hey')
 
 with st.expander('Visualize the data:'):
   st.scatter_chart(data=data, x='bill_depth_mm', x_label='Bill Depth', y='body_mass_g', y_label='Body Mass', color='species')

@@ -8,7 +8,7 @@ st.info("Hello!")
 data = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv")
 
 for animal in data:
-  animal['body_mass_g'] /= 1000
+  animal.body_mass_g = animal.body_mass_g / 1000
 
 data.rename(columns={'body_mass_g' : 'body_mass_kg'}, inplace='True')
 

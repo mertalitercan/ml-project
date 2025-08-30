@@ -27,7 +27,7 @@ with st.expander('Data:'):
 with st.expander('Visualize:'):
   st.scatter_chart(data=data, x='bill_depth_mm', x_label='Bill Depth (mm)', y='body_mass_kg', y_label='Body Mass (kg)', color='species')
 
-with st.sidebar('Make predictions'):
+with st.sidebar:
   st.header('Your inputs:')
   island = st.selectbox('Island', ('Torgersen', 'Biscoe', 'Dream'), placeholder='Choose island...')
   gender = st.selectbox('Gender', ('Male', 'Female'), placeholder='Choose gender...')
@@ -35,4 +35,12 @@ with st.sidebar('Make predictions'):
   bill_depth_mm = st.slider('Bill Depth (mm)', min(data['bill_depth_mm']), max(data['bill_depth_mm']), float(data['bill_depth_mm'].mean()))
   flipper_length_mm = st.slider('Flipper Length (mm)', float(min(data['flipper_length_mm'])), float(max(data['flipper_length_mm'])), float(data['flipper_length_mm'].mean()))
   body_mass_kg = st.slider('Body Mass (kg)', float(min(data['body_mass_kg'])), float(max(data['body_mass_kg'])), float(data['body_mass_kg'].mean()))
+
+inputs = { 'island': island, 'bill_length_mm': bill_length_mm, 'bill_depth_mm': bill_depth_mm,
+           'flipper_length_mm': flipper_length_mm, 'body_mass_kg': body_mass_kg, 'sex': gender    
+}
+
+inputs_df = pd.DataFrame(inputs, index=[0])
+
+
 

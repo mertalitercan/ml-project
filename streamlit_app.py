@@ -31,5 +31,5 @@ with st.sidebar:
   st.header('Your inputs:')
   island = st.selectbox('Island', ('Torgersen', 'Biscoe', 'Dream'), placeholder='Choose island...')
   gender = st.selectbox('Gender', ('Male', 'Female'), placeholder='Choose gender...')
-  bill_length_mm = st.slider('Bill Length (mm)', min(data['bill_length_mm']), max(data['bill_length_mm']), float(data['bill_length_mm'].mean()))
+  bill_length_mm = st.slider('Bill Length (mm)', min(data['bill_length_mm']), max(data['bill_length_mm']), data['bill_length_mm'].mean())
 

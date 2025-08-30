@@ -24,5 +24,5 @@ with st.expander('Data:'):
   y
 
 with st.expander('Visualize:'):
-  st.scatter_chart(data=data, x='bill_depth_mm', x_label='Bill Depth', y='body_mass_g', y_label='Body Mass', color='species')
+  st.scatter_chart(data=data, x='bill_depth_mm', x_label='Bill Depth', y='body_mass_kg', y_label='Body Mass', color='species')
 
